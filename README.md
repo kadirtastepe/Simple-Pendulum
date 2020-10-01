@@ -1,6 +1,6 @@
 # Simple-Pendulum
 
-2 kg mass hanging from a massless string of 2m length swinging from a central pivot point. The mass is pulled out at 60 degrees angle and released for 1 period.
+2 kg mass hanging from a massless string of 2m length swinging from a central pivot point. The mass is pulled out at 45 degrees angle and released for 1 period.
 
 
 Motion of a simple pendulum represented by differential equation.
