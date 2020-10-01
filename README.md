@@ -1,6 +1,6 @@
 # Simple-Pendulum
 
-2 kg mass hanging from a massless string of 2m length swinging from a central pivot point. The mass is pulled out at 45 degrees angle and released for 1 period.
+2 kg mass hanging from a massless string of 2m length swinging from a central pivot point. The mass is pulled out at 30 degrees angle and released for 1 period.
 
 
 Motion of a simple pendulum represented by differential equation.
@@ -15,8 +15,13 @@ Solution of the differential equation for small angles given by
 
 <img src="http://latex.codecogs.com/svg.latex?\theta(t)&space;=&space;\theta_{max}\cos(\omega&space;t)" title="http://latex.codecogs.com/svg.latex?\theta(t) = \theta_{max}\cos(\omega t)" />
 
+x and y positions of the mass defined as
+
 <img src="http://latex.codecogs.com/svg.latex?x(t)&space;=&space;L\sin(\theta(t))" title="http://latex.codecogs.com/svg.latex?x(t) = L\sin(\theta(t))" />
+
 <img src="http://latex.codecogs.com/svg.latex?y(t)&space;=&space;L\cos(\theta(t))" title="http://latex.codecogs.com/svg.latex?y(t) = L\cos(\theta(t))" />
+
+Change in kinetic energy and potential energy with respect to time
 
 ![pendulum](https://github.com/kadirtastepe/Simple-Pendulum/blob/master/pendulum.GIF)
 
