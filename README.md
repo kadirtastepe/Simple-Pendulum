@@ -18,7 +18,7 @@ Solution of the differential equation for small angles given by
 <img src="http://latex.codecogs.com/svg.latex?x(t)&space;=&space;L\sin(\theta(t))" title="http://latex.codecogs.com/svg.latex?x(t) = L\sin(\theta(t))" />
 <img src="http://latex.codecogs.com/svg.latex?y(t)&space;=&space;L\cos(\theta(t))" title="http://latex.codecogs.com/svg.latex?y(t) = L\cos(\theta(t))" />
 
-![pendulum](https://github.com/kadirtastepe/Free-Fall/blob/master/pendulum.GIF)
+![pendulum](https://github.com/kadirtastepe/Simple-Pendulum/blob/master/pendulum.GIF)
 
 
 
