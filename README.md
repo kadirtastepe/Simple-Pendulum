@@ -23,7 +23,7 @@ x and y positions of the mass defined as
 
 Change in kinetic energy and potential energy with respect to time
 
-![pendulum](https://github.com/kadirtastepe/Simple-Pendulum/blob/master/pendulum.GIF)
+![pendulum](https://github.com/kadirtastepe/Simple-Pendulum/blob/main/pendulum.GIF)
 
 
 
