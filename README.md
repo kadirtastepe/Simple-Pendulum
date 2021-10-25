@@ -25,9 +25,14 @@ Change in kinetic energy and potential energy with respect to time
 
 ![pendulum](https://github.com/kadirtastepe/Simple-Pendulum/blob/main/pendulum.GIF)
 
-<img src="https://github.com/kadirtastepe/Simple-Pendulum/blob/main/pendulum.GIF" width="80" height="80" />
 
-<img src="https://github.com/kadirtastepe/Simple-Pendulum/blob/main/pendulum.GIF" alt="zigzag" />
+<img src="{{site.baseurl | prepend: site.url}}movies/zigzag.gif" alt="pendulum" />
+
+<!-- OR -->
+
+<img src="{{ "https://github.com/kadirtastepe/Simple-Pendulum/blob/main/pendulum.GIF" | prepend: site.baseurl | prepend: site.url}}" alt="pendulum" />
+
+<img src="https://github.com/kadirtastepe/Simple-Pendulum/blob/main/pendulum.GIF" alt="pendulum" />
 
 
 
