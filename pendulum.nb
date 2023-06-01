@@ -1,0 +1,451 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18649,        443]
+NotebookOptionsPosition[     17946,        421]
+NotebookOutlinePosition[     18438,        439]
+CellTagsIndexPosition[     18395,        436]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Pendulum", "Title",
+ CellChangeTimes->{{3.809785617533436*^9, 
+  3.809785619124771*^9}},ExpressionUUID->"2c7b09ec-4479-4f32-b2d5-\
+2d3cf44ca9e8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"g", "=", "9.80665"}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"m", "/", 
+    SuperscriptBox["s", "2"]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"m", "=", "2"}], ";"}], 
+  RowBox[{"(*", "kg", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"length", " ", "=", " ", "2"}], ";"}], " ", 
+  RowBox[{"(*", "m", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Theta]max", "=", 
+   RowBox[{"30", "*", 
+    RowBox[{"Pi", "/", "180"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Omega]", "=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"g", "/", "length"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Theta]", "[", "t_", "]"}], ":=", 
+    RowBox[{"\[Theta]max", "*", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Omega]", "*", "t"}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"x", "[", "t_", "]"}], ":=", " ", 
+   RowBox[{"length", "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"y", "[", "t_", "]"}], " ", ":=", 
+    RowBox[{"length", "*", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}]}], ";"}], "  ", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"T", "=", " ", 
+   FractionBox[
+    RowBox[{"4", "*", "2", "*", 
+     RowBox[{"Sqrt", "[", "length", "]"}]}], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"\[Theta]max", "/", "2"}], "]"}], "]"}]}], ")"}], "2"]]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"T0", "=", 
+    RowBox[{"2", "*", "Pi", "*", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"length", "/", "g"}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Animate", "[", 
+   RowBox[{
+    RowBox[{"Grid", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Show", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Graphics", "[", 
+            RowBox[{
+             RowBox[{"Rectangle", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "0.1"}], ",", "length"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0.1", ",", 
+                 RowBox[{"length", "+", "0.01"}]}], "}"}]}], "]"}], ",", 
+             RowBox[{"PlotLabel", "\[Rule]", 
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<A Simple Pendulum\>\"", ",", "Red"}], "]"}]}]}], 
+            "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{"{", 
+             RowBox[{"Dashed", ",", 
+              RowBox[{"Line", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "0"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "length"}], "}"}]}], "}"}], "]"}]}], 
+             "}"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"Graphics", "[", 
+              RowBox[{"Rotate", "[", 
+               RowBox[{
+                RowBox[{"Line", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "length"}], "}"}]}], "}"}], "]"}], ",", 
+                
+                RowBox[{"\[Theta]", " ", "Degree"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "length"}], "}"}]}], "]"}], "]"}], ","}], 
+            "*)"}], "\[IndentingNewLine]", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"x", "[", "t", "]"}], ",", 
+                 RowBox[{"length", "-", 
+                  RowBox[{"y", "[", "t", "]"}]}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "length"}], "}"}]}], "}"}], "]"}], "]"}], 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"PointSize", "[", "0.06", "]"}], ",", "Red", ",", 
+               RowBox[{"Point", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"x", "[", "t", "]"}], ",", 
+                  RowBox[{"length", "-", 
+                   RowBox[{"y", "[", "t", "]"}]}]}], "}"}], "]"}]}], "}"}], 
+             ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"600", ",", "400"}], "}"}]}]}], "]"}], ",", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Gray", ",", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{"2", ",", 
+                 RowBox[{"-", "0.5"}]}], " ", "}"}], "]"}]}], "}"}], "]"}], 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Green", ",", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0"}], " ", "}"}], "]"}]}], "}"}], "]"}], 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Gray", ",", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "2"}], ",", 
+                 RowBox[{"-", "0.5"}]}], " ", "}"}], "]"}]}], "}"}], "]"}], 
+           ",", 
+           RowBox[{"Background", "\[Rule]", 
+            RowBox[{"Lighter", "[", 
+             RowBox[{"Gray", ",", " ", "0.5"}], "]"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"Show", "[", 
+          RowBox[{
+           RowBox[{"Plot", "[", 
+            RowBox[{
+             RowBox[{"0.5", "*", "m", "*", 
+              SuperscriptBox[
+               RowBox[{
+                RowBox[{"x", "'"}], "[", "a", "]"}], "2"]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"a", ",", "0", ",", "t"}], "}"}], ",", 
+             RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+             RowBox[{"FrameLabel", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<t(s)\>\"", ",", "\"\<E(J)\>\""}], "}"}]}], ",", 
+             RowBox[{"PlotLegends", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<\!\(\*SubscriptBox[\(E\), \(K\)]\) = \>\"", " ", 
+                RowBox[{"NumberForm", "[", 
+                 RowBox[{
+                  RowBox[{"0.5", "*", "m", "*", 
+                   SuperscriptBox[
+                    RowBox[{
+                    RowBox[{"x", "'"}], "[", "t", "]"}], "2"]}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"5", ",", "3"}], "}"}]}], "]"}], 
+                RowBox[{"Text", "[", "\"\<J\>\"", "]"}]}], "}"}]}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", "Red"}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", " ", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "T0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "6"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Plot", "[", 
+            RowBox[{
+             RowBox[{"m", "*", "g", "*", 
+              RowBox[{"(", 
+               RowBox[{"length", "-", 
+                RowBox[{"y", "[", "a", "]"}]}], ")"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"a", ",", "0", ",", "t"}], "}"}], ",", 
+             RowBox[{"PlotLegends", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<\!\(\*SubscriptBox[\(E\), \(P\)]\) = \>\"", 
+                RowBox[{"NumberForm", "[", 
+                 RowBox[{
+                  RowBox[{"m", "*", "g", "*", 
+                   RowBox[{"(", 
+                    RowBox[{"length", "-", 
+                    RowBox[{"y", "[", "t", "]"}]}], ")"}]}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"5", ",", "3"}], "}"}]}], "]"}], 
+                RowBox[{"Text", "[", "\"\<J\>\"", "]"}]}], "}"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"600", ",", "400"}], "}"}]}]}], "]"}]}], 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}]}], 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        "}"}], "}"}], ",", " ", 
+      RowBox[{"Background", "\[Rule]", 
+       RowBox[{"Lighter", "[", 
+        RowBox[{"Gray", ",", " ", "0.5"}], "]"}]}]}], "]"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0.001", ",", "\"\<time (s)\>\""}], "}"}], ",", "0", 
+      ",", "T0"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwd0VtM0gEYBXBQ8hoWWajTSm3q1GxJ0lXLyowVJpppynRiUEssp6vNssxF
+UZmZl5K0hpcaqzTXmF2mTGNrBGbSXDNLKxNik6l5JQWVOP+Hb7+Hc17OPr+s
+3ESBHYlEirQdXO0foa/OGt2rMq8fhSsl8xMwQ+5Fkth0MlU7wsxpMhUGvmXw
+od6ZRajO8LJ7YPPp/muesM/a6w8NU7QNMCy+Lw6aez9wIIlsTYKrTJUp0K7o
+MhdOGJUCyOBJhohew7o/8KL63AzMFFjINTaPx5YegYMhRzlwvMI3FUbLJwnT
+uFtF0JiivQHZz85I4SK7VAYdfEXNcDdlbQt8og14A+l1Ie1QzZ6dgUK+ygSv
+FFAda7Hb4uIOmy5EecP8oqAA2F5bFgwVaaYweH9bFQsO9bfEwYzpcR7kS3bm
+wdsxYSK4lHBTDBfUJXVE3hD/At4zr2iFwYz+V7DhpEM7ZAmPvYNXZzk62COd
+NMBY8fAYLBd5/IVu9lkmWDDcNwc5LtIFqHfLIz202bjR1QF2yKII68UyV3i3
+xpkG6w510uFzEdMbxpaM+MHfvORwGDqgYUMLpSoBpvcyuFA1n0s4pzzBg/+6
+ThO+TOYKYfLkpxzYzIoRQYNbmRSaNa0KOFEYqYKJ/du7IGW500co07p/gwUC
+6nfodn2ZDqYKt8xCY8LAPNQocu0f2YyrT6LB7Fv0NXCszTsQ5iuZQbDD3icU
+9px1ZkKmB3MHLKx8vAvKjcEHYMkm8UE4ZTUdhpym6FQoU4enw83ZPgJo2XOp
+CHbrcoqh1W9UC8ly6mf4ukM5AN8rPAdhY1tEpAff9m/LvmhYfEpz29PmIM1A
+qP/KKIdTCz8rIP1X9w94njJC6HunUweXFr8Q/gcQVO/x
+  "],
+ CellLabel->"In[1]:=",ExpressionUUID->"19a3ef7c-03f9-421b-94f3-e476242588d8"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 1.1359126059824538`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`t$$], 0.001, "time (s)"}, 0, 2.8374912332508284`}}, 
+    Typeset`size$$ = {483., {65.134033203125, 70.865966796875}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0.001}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Grid[{{
+          Show[
+           Graphics[
+            
+            Rectangle[{-0.1, $CellContext`length}, {
+             0.1, $CellContext`length + 0.01}], PlotLabel -> 
+            Style["A Simple Pendulum", Red]], 
+           Graphics[{Dashed, 
+             Line[{{0, 0}, {0, $CellContext`length}}]}], 
+           Graphics[
+            Line[{{
+               $CellContext`x[$CellContext`t$$], $CellContext`length - \
+$CellContext`y[$CellContext`t$$]}, {0, $CellContext`length}}]], 
+           Graphics[{
+             PointSize[0.06], Red, 
+             Point[{
+               $CellContext`x[$CellContext`t$$], $CellContext`length - \
+$CellContext`y[$CellContext`t$$]}]}, ImageSize -> {600, 400}], 
+           Graphics[{
+             PointSize[Large], Gray, 
+             Point[{2, -0.5}]}], 
+           Graphics[{
+             PointSize[Large], Green, 
+             Point[{0, 0}]}], 
+           Graphics[{
+             PointSize[Large], Gray, 
+             Point[{-2, -0.5}]}], Background -> Lighter[Gray, 0.5]], 
+          Show[
+           Plot[
+           0.5 $CellContext`m 
+            Derivative[1][$CellContext`x][$CellContext`a]^2, {$CellContext`a, 
+             0, $CellContext`t$$}, Frame -> True, 
+            FrameLabel -> {"t(s)", "E(J)"}, 
+            PlotLegends -> {
+             "\!\(\*SubscriptBox[\(E\), \(K\)]\) = " 
+              NumberForm[
+               0.5 $CellContext`m 
+                Derivative[1][$CellContext`x][$CellContext`t$$]^2, {5, 3}] 
+              Text["J"]}, PlotStyle -> Red, 
+            PlotRange -> {{0, $CellContext`T0}, {0, 6}}], 
+           
+           Plot[$CellContext`m $CellContext`g ($CellContext`length - \
+$CellContext`y[$CellContext`a]), {$CellContext`a, 0, $CellContext`t$$}, 
+            PlotLegends -> {
+             "\!\(\*SubscriptBox[\(E\), \(P\)]\) = " 
+              NumberForm[$CellContext`m $CellContext`g ($CellContext`length - \
+$CellContext`y[$CellContext`t$$]), {5, 3}] Text["J"]}, 
+            ImageSize -> {600, 400}]]}}, Background -> Lighter[Gray, 0.5]], 
+      "Specifications" :> {{{$CellContext`t$$, 0.001, "time (s)"}, 0, 
+         2.8374912332508284`, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{527., {103., 108.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.809785697708714*^9, {3.809785745805996*^9, 3.809785858430195*^9}, {
+   3.809785917199917*^9, 3.809785922390217*^9}, 3.8097865777781763`*^9, 
+   3.80978795256063*^9, 3.809787993366988*^9, {3.809788050343463*^9, 
+   3.809788100661766*^9}, 3.809788185047923*^9, 3.80978861209107*^9, {
+   3.8097886460733433`*^9, 3.809788722926621*^9}, {3.809789720134069*^9, 
+   3.809789737296729*^9}, 3.8097900062603073`*^9, {3.809790584873015*^9, 
+   3.809790595279339*^9}, 3.8097906719190693`*^9, {3.809791263866593*^9, 
+   3.8097912792059183`*^9}, 3.809791348242244*^9, 3.809791444688643*^9, 
+   3.809791879631315*^9, {3.8097921227658863`*^9, 3.809792128950871*^9}, {
+   3.8097922425672207`*^9, 3.809792297707966*^9}, {3.809792335571596*^9, 
+   3.809792368576252*^9}, {3.809792582585017*^9, 3.8097926230313797`*^9}, {
+   3.8097927909222403`*^9, 3.809792907190321*^9}, {3.809793055967203*^9, 
+   3.809793077030382*^9}, {3.809793266219775*^9, 3.809793387626224*^9}, {
+   3.80979344207365*^9, 3.809793456449749*^9}, {3.809793498469214*^9, 
+   3.809793539648635*^9}, {3.809793807564749*^9, 3.809793820224803*^9}, {
+   3.809793907601343*^9, 3.809793913018958*^9}, {3.809793971600562*^9, 
+   3.8097939911186028`*^9}, {3.8097940319902067`*^9, 3.809794052203142*^9}, 
+   3.809794232160405*^9, {3.8097943355580397`*^9, 3.8097943462314367`*^9}, 
+   3.8097943876001863`*^9, 3.8097944475401487`*^9, 3.809794568621266*^9, 
+   3.809794664315714*^9, 3.809794701453223*^9, 3.809794782214509*^9, 
+   3.8097948280098543`*^9, 3.809794920630262*^9, 3.809795207258003*^9, 
+   3.809795286869823*^9, 3.809795317830723*^9, {3.809795565862432*^9, 
+   3.809795589770626*^9}, {3.8097956396082573`*^9, 3.809795674983901*^9}, 
+   3.8097957953846827`*^9, {3.809795886551326*^9, 3.809795904539433*^9}, {
+   3.80979596475333*^9, 3.80979601081496*^9}, {3.809796088989564*^9, 
+   3.809796150359136*^9}, {3.8097962366783657`*^9, 3.8097962656885843`*^9}, {
+   3.809796504361047*^9, 3.8097965216752453`*^9}, {3.8097965633438168`*^9, 
+   3.809796574315942*^9}, {3.809796651766284*^9, 3.80979666943029*^9}, {
+   3.809796705390585*^9, 3.80979673409638*^9}, {3.809796768592512*^9, 
+   3.8097967915834007`*^9}, {3.809796854477161*^9, 3.809796866290842*^9}, 
+   3.809796906975462*^9, 3.809797131387025*^9, 3.809797761789365*^9, 
+   3.8097978578775*^9, {3.810572751970496*^9, 3.810572802611106*^9}, 
+   3.810575456437076*^9, {3.8105754904357243`*^9, 3.8105755033844757`*^9}, 
+   3.810576112056068*^9, 3.810576159196537*^9, 3.894626446867036*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"5989a875-05ba-425c-994a-180d69b60c48"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1327, 766},
+WindowMargins->{{155, Automatic}, {Automatic, 63}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ec841858-b81b-47a4-ae2e-b7294b53fffb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 151, 3, 98, "Title",ExpressionUUID->"2c7b09ec-4479-4f32-b2d5-2d3cf44ca9e8"],
+Cell[CellGroupData[{
+Cell[756, 29, 10672, 265, 911, "Input",ExpressionUUID->"19a3ef7c-03f9-421b-94f3-e476242588d8"],
+Cell[11431, 296, 6487, 121, 230, "Output",ExpressionUUID->"5989a875-05ba-425c-994a-180d69b60c48"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
